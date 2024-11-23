@@ -11,7 +11,6 @@ public class Operation {
     private Response _return;
     private java.util.List<String> security;
     private Integer stability;
-    private java.util.List<String> tags;
     private java.util.List<Response> _throws;
 
     @JsonSetter("arguments")
@@ -92,16 +91,6 @@ public class Operation {
     @JsonGetter("stability")
     public Integer getStability() {
         return this.stability;
-    }
-
-    @JsonSetter("tags")
-    public void setTags(java.util.List<String> tags) {
-        this.tags = tags;
-    }
-
-    @JsonGetter("tags")
-    public java.util.List<String> getTags() {
-        return this.tags;
     }
 
     @JsonSetter("throws")
