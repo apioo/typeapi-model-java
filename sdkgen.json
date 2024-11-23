@@ -1,0 +1,12 @@
+{
+  "type": "model-java",
+  "require": {
+    "typehub/typeapi": {
+      "target": "./src/main/java/org/typeapi/model",
+      "namespace": "org.typeapi.model",
+      "mapping": {
+        "typeschema": "org.typeschema.model"
+      }
+    }
+  }
+}
