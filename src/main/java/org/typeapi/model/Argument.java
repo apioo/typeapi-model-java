@@ -2,6 +2,9 @@ package org.typeapi.model;
 
 import com.fasterxml.jackson.annotation.*;
 
+/**
+ * Describes arguments of the operation
+ */
 public class Argument {
     private String contentType;
     private String in;

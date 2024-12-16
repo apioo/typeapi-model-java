@@ -2,6 +2,9 @@ package org.typeapi.model;
 
 import com.fasterxml.jackson.annotation.*;
 
+/**
+ * Describes the response of the operation
+ */
 public class Response {
     private Integer code;
     private String contentType;
