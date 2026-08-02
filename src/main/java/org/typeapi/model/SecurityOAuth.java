@@ -2,6 +2,7 @@ package org.typeapi.model;
 
 import com.fasterxml.jackson.annotation.*;
 
+@JsonClassDescription("Describes OAuth 2.0 authentication, defining endpoints and scopes required by the API.")
 public class SecurityOAuth extends Security {
     @JsonPropertyDescription("Optional OAuth2 authorization endpoint URL.")
     @JsonProperty("authorizationUrl")

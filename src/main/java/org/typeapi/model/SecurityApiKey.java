@@ -2,6 +2,7 @@ package org.typeapi.model;
 
 import com.fasterxml.jackson.annotation.*;
 
+@JsonClassDescription("Describes API key authentication passed via a header or query parameter.")
 public class SecurityApiKey extends Security {
     @JsonPropertyDescription("The location of the API key. Must be either \"header\" or \"query\".")
     @JsonProperty("in")
