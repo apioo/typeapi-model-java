@@ -2,40 +2,41 @@ package org.typeapi.model;
 
 import com.fasterxml.jackson.annotation.*;
 
-/**
- * Describes the response of the operation
- */
+@JsonClassDescription("Describes an HTTP response returned by an operation.")
 public class Response {
+    @JsonPropertyDescription("The HTTP status code associated with this response. Wildcard error status codes like 499, 599, or 999 can be used to catch all errors.")
+    @JsonProperty("code")
     private Integer code;
+
+    @JsonPropertyDescription("The content type to use when the response body cannot be described by a JSON schema.")
+    @JsonProperty("contentType")
     private String contentType;
+
+    @JsonPropertyDescription("JSON schema describing the structure of the response payload.")
+    @JsonProperty("schema")
     private org.typeschema.model.PropertyType schema;
 
-    @JsonSetter("code")
+
     public void setCode(Integer code) {
         this.code = code;
     }
 
-    @JsonGetter("code")
     public Integer getCode() {
         return this.code;
     }
 
-    @JsonSetter("contentType")
     public void setContentType(String contentType) {
         this.contentType = contentType;
     }
 
-    @JsonGetter("contentType")
     public String getContentType() {
         return this.contentType;
     }
 
-    @JsonSetter("schema")
     public void setSchema(org.typeschema.model.PropertyType schema) {
         this.schema = schema;
     }
 
-    @JsonGetter("schema")
     public org.typeschema.model.PropertyType getSchema() {
         return this.schema;
     }

@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.*;
     @JsonSubTypes.Type(value = SecurityHttpBearer.class, name = "httpBearer"),
     @JsonSubTypes.Type(value = SecurityOAuth.class, name = "oauth2"),
 })
+@JsonClassDescription("Describes the authentication mechanism used by the API.")
 public abstract class Security {
+    @JsonPropertyDescription("The global security type of the API. Must be one of: httpBasic, httpBearer, apiKey, or oauth2.")
+    @JsonProperty("type")
     private String type;
 
-    @JsonSetter("type")
+
     public void setType(String type) {
         this.type = type;
     }
 
-    @JsonGetter("type")
     public String getType() {
         return this.type;
     }
