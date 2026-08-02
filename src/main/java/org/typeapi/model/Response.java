@@ -8,11 +8,11 @@ public class Response {
     @JsonProperty("code")
     private Integer code;
 
-    @JsonPropertyDescription("The content type to use when the response body cannot be described by a JSON schema.")
+    @JsonPropertyDescription("The content type to use when the response body cannot be described by a TypeSchema.")
     @JsonProperty("contentType")
     private String contentType;
 
-    @JsonPropertyDescription("JSON schema describing the structure of the response payload.")
+    @JsonPropertyDescription("TypeSchema describing the structure of the response payload.")
     @JsonProperty("schema")
     private org.typeschema.model.PropertyType schema;
 

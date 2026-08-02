@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.*;
 
 @JsonClassDescription("Describes an argument passed to an operation.")
 public class Argument {
-    @JsonPropertyDescription("The content type to use when the payload cannot be described by a JSON schema.")
+    @JsonPropertyDescription("The content type to use when the payload cannot be described by a TypeSchema.")
     @JsonProperty("contentType")
     private String contentType;
 
@@ -16,7 +16,7 @@ public class Argument {
     @JsonProperty("name")
     private String name;
 
-    @JsonPropertyDescription("JSON schema describing the structure of the argument payload.")
+    @JsonPropertyDescription("TypeSchema describing the structure of the argument payload.")
     @JsonProperty("schema")
     private org.typeschema.model.PropertyType schema;
 
